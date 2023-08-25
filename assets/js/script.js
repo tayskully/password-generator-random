@@ -1,5 +1,5 @@
 //determine password length from user input. set parameters  - less than 8 or more than 128 doesn't work.
-function passwordLength() {
+function passwordLength(event) {
   var userLength = parseInt(
     window.prompt("How many characters does your password need to be?")
   );
@@ -15,7 +15,7 @@ function passwordLength() {
     window.alert(
       "Your password must be more than 8 characters, or less than 128 characters. Try Again!"
     ),
-    window.preventDefault()
+    event.preventDefault()
   );
 }
 //function provides lenght of characters
@@ -23,14 +23,14 @@ function passwordLength() {
 //find out further preferences
 //ask if you we are using upper case, lower case, numbers, and/or special characters
 
-function passwordPref() {
+function passwordPref(event) {
   var userLowerCase = window.confirm("Are we using Lower Case characters?");
   var userUpperCase = window.confirm("Are we using Upper Case characters?");
   var userNumbers = window.confirm("Are we using Numbers?");
   var userSpecicalChar = window.confirm("Are we using Special Characters?");
   if (!userLowerCase && !userUpperCase && !userNumbers && !userSpecicalChar) {
-    window.alert("Hey! You done did it wrong!"), window.preventDefault();
-    return passwordPref();
+    window.alert("Hey! You done did it wrong!");
+    return passwordPref(), event.preventDefault();
   } else if (
     !userLowerCase ||
     !userUpperCase ||
