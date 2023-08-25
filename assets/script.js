@@ -1,10 +1,3 @@
-//button click - starts the prompts
-
-// ask how long you want password
-//check if pw is bt 1 & 128 characters
-//if no ask again
-//if yes then put them in the !! list of chosen character !!
-
 function passwordLength() {
   var userLength = parseInt(
     window.prompt("How many characters does your password need to be?")
