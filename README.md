@@ -6,7 +6,7 @@ The password generating tool will use your given criteria to make a password tha
 You can then copy and paste it into whichever account you like. 
 
 ## Usage
-Please visit my [Site!]([https://link-url-here.org](https://tayskully.github.io/password-generator-random/))
+Please visit my [Site!](https://tayskully.github.io/password-generator-random/)
 In order to get the full experience, users must first click the "Generate Password" button in order to prompt the algorithm. Once the button has been pressed, the browser will ask you for your preferred password criteria. 
 With every answer given, the functions will work to create a perfect password for you. Choose any option! your password will be generated. 
 
