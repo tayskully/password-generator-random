@@ -1,7 +1,4 @@
 //button click - starts the prompts
-// // // Get references to the #generate element
-
-var generateBtn = document.querySelector("#generate");
 
 // ask how long you want password
 //check if pw is bt 1 & 128 characters
@@ -14,19 +11,21 @@ function passwordLength() {
   );
   if (userLength >= 8 && userLength < 128) {
     return userLength;
-
   } else if (userLength < 8) {
     window.alert(
       "Your password must be at least 8 characters, and no more than 128 characters.  Please try again."
-    ), passwordLength(), console.log ("ran through small number");
+    ),
+      passwordLength(),
+      console.log("ran through small number");
   } else if (userLength > 128) {
     window.alert(
       "Your password must be less than 128 characters.  Please try again."
-    ), console.log ("ran through big number"), passwordLength();
-
-  } else userLength === null 
-  console.log("ran through last else")
-  return window.alert("try again!"), window.preventDefault(); ;
+    ),
+      console.log("ran through big number"),
+      passwordLength();
+  } else userLength === null;
+  console.log("ran through last else");
+  return window.alert("try again!"), window.preventDefault();
 }
 
 //somewhere in the length there is an issue,
@@ -54,7 +53,7 @@ function passwordPref() {
 
   console.log(userLowerCase, userUpperCase, userNumbers, userSpecicalChar);
   return {
-    userLowerCase, //these are key value pairs that re inside of an object, return as true of false 
+    userLowerCase, //these are key value pairs that re inside of an object, return as true of false
     userUpperCase,
     userNumbers,
     userSpecicalChar,
@@ -100,6 +99,7 @@ function generatePassword() {
 // //input should be validated and at least one character type should be selected
 
 // //generates password and puts it in either prompt or on the screen
+var generateBtn = document.querySelector("#generate");
 
 // // Write password to the #password input
 
