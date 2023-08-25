@@ -2,10 +2,11 @@
 ## A random password generator! 
 
 This password generator was created to help move your password generating up to the next level. 
-The password generating tool will use your given criteria to make a password that fits your needs. Y
-ou can then copy and paste it into whichever account you like. 
+The password generating tool will use your given criteria to make a password that fits your needs. 
+You can then copy and paste it into whichever account you like. 
 
 ## Usage
+Please visit my [Site!]([https://link-url-here.org](https://tayskully.github.io/password-generator-random/))
 In order to get the full experience, users must first click the "Generate Password" button in order to prompt the algorithm. Once the button has been pressed, the browser will ask you for your preferred password criteria. 
 With every answer given, the functions will work to create a perfect password for you. Choose any option! your password will be generated. 
 
@@ -31,3 +32,4 @@ The collaborators on this project include me, myself, and Taylor
 
 
 ## License
+MIT License
