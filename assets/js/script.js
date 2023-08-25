@@ -1,3 +1,4 @@
+//determine password length from user input. set parameters  - less than 8 or more than 128 doesn't work.
 function passwordLength() {
   var userLength = parseInt(
     window.prompt("How many characters does your password need to be?")
@@ -5,28 +6,22 @@ function passwordLength() {
   if (userLength >= 8 && userLength < 128) {
     return userLength;
   } else if (userLength < 8) {
-    window.alert(
-      "Your password must be at least 8 characters, and no more than 128 characters.  Please try again."
-    ),
-      passwordLength(),
-      console.log("ran through small number");
+    console.log("ran through small number");
   } else if (userLength > 128) {
-    window.alert(
-      "Your password must be less than 128 characters.  Please try again."
-    ),
-      console.log("ran through big number"),
-      passwordLength();
+    console.log("ran through big number");
   } else userLength === null;
   console.log("ran through last else");
-  return window.alert("try again!"), window.preventDefault();
+  return (
+    window.alert(
+      "Your password must be more than 8 characters, or less than 128 characters. Try Again!"
+    ),
+    window.preventDefault()
+  );
 }
+//function provides lenght of characters
 
-//somewhere in the length there is an issue,
-
-//ask if you we are using Upper Case?
-//are we using lower case characters?
-//are we using special characters?
-//are we using numerical characters?
+//find out further preferences
+//ask if you we are using upper case, lower case, numbers, and/or special characters
 
 function passwordPref() {
   var userLowerCase = window.confirm("Are we using Lower Case characters?");
@@ -34,7 +29,7 @@ function passwordPref() {
   var userNumbers = window.confirm("Are we using Numbers?");
   var userSpecicalChar = window.confirm("Are we using Special Characters?");
   if (!userLowerCase && !userUpperCase && !userNumbers && !userSpecicalChar) {
-    window.alert("Hey! you done did it wrong!"), window.preventDefault();
+    window.alert("Hey! You done did it wrong!"), window.preventDefault();
     return passwordPref();
   } else if (
     !userLowerCase ||
@@ -43,7 +38,9 @@ function passwordPref() {
     !userSpecicalChar
   ) {
   }
+  //returns the preferences, unless none were chosen, then it alerts error.
 
+  //log the boolean values for fun
   console.log(userLowerCase, userUpperCase, userNumbers, userSpecicalChar);
   return {
     userLowerCase, //these are key value pairs that re inside of an object, return as true of false
@@ -53,9 +50,8 @@ function passwordPref() {
   };
 }
 
+//based on chosen length, select random characters from the chosen character set and put them in the password
 function generatePassword() {
-  //   //based on chosen length, select random characters from the chosen character set and put them in the password
-
   var numbers = "0123456789";
   var lowerCase = "abcdefghijklmnopqrstuvwxyz";
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -86,15 +82,11 @@ function generatePassword() {
 
   return password;
 }
+//selects element and assigns it to variable
 
-// //asks character type preferences (I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters)
-
-// //input should be validated and at least one character type should be selected
-
-// //generates password and puts it in either prompt or on the screen
 var generateBtn = document.querySelector("#generate");
 
-// // Write password to the #password input
+// Writes password to the #password input
 
 function writePassword() {
   var password = generatePassword();
@@ -103,6 +95,6 @@ function writePassword() {
   passwordText.value = password;
 }
 
-// // Add event listener to generate button
+//Adds event listener to generate button
 
 generateBtn.addEventListener("click", writePassword);
